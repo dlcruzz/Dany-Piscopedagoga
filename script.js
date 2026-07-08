@@ -177,42 +177,67 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---------- testimonial carousel ----------
   const track = document.getElementById('quotesTrack');
   const dotsWrap = document.getElementById('quotesDots');
+  const quotesPrev = document.getElementById('quotesPrev');
+  const quotesNext = document.getElementById('quotesNext');
   if (track) {
-    const slides = track.children.length;
+    const slides = track.children.length; // real slides
     if (slides > 1) {
-      const clone = track.children[0].cloneNode(true);
-      clone.setAttribute('aria-hidden', 'true');
-      track.appendChild(clone);
+      const firstClone = track.children[0].cloneNode(true);
+      const lastClone = track.children[slides - 1].cloneNode(true);
+      firstClone.setAttribute('aria-hidden', 'true');
+      lastClone.setAttribute('aria-hidden', 'true');
+      track.appendChild(firstClone);
+      track.insertBefore(lastClone, track.children[0]);
     }
-    let current = 0, timer = null, jumping = false;
+    // real slides now sit at track positions 1..slides (0 and slides+1 are the wrap-around clones)
+    let current = 1, timer = null, jumping = false;
+    track.style.transition = 'none';
+    track.style.transform = 'translateX(-100%)';
+    void track.offsetWidth;
+    track.style.transition = '';
+
     for (let i = 0; i < slides; i++) {
       const b = document.createElement('button');
       if (i === 0) b.classList.add('active');
-      b.addEventListener('click', () => { goTo(i); restartAutoplay(); });
+      b.addEventListener('click', () => { goTo(i + 1); restartAutoplay(); });
       dotsWrap.appendChild(b);
+    }
+
+    function setDots(realIdx) {
+      [...dotsWrap.children].forEach((d, idx) => d.classList.toggle('active', idx === realIdx));
     }
     function goTo(i) {
       current = i;
       track.style.transform = `translateX(-${current * 100}%)`;
-      [...dotsWrap.children].forEach((d, idx) => d.classList.toggle('active', idx === current % slides));
-      if (current === slides) jumping = true;
+      setDots(((current - 1) + slides) % slides);
+      jumping = (current === 0 || current === slides + 1);
     }
     track.addEventListener('transitionend', () => {
       if (!jumping) return;
       jumping = false;
       track.style.transition = 'none';
-      current = 0;
-      track.style.transform = 'translateX(0%)';
+      current = current === 0 ? slides : 1;
+      track.style.transform = `translateX(-${current * 100}%)`;
       void track.offsetWidth;
       track.style.transition = '';
     });
+    function randomStep() {
+      const realIdx = ((current - 1) + slides) % slides;
+      let next = realIdx;
+      if (slides > 1) {
+        while (next === realIdx) next = Math.floor(Math.random() * slides);
+      }
+      goTo(next + 1);
+    }
     function autoplay() {
-      timer = setInterval(() => goTo(current + 1), 5200);
+      timer = setInterval(randomStep, 5200);
     }
     function restartAutoplay() {
       clearInterval(timer);
       if (!reduceMotion) autoplay();
     }
+    quotesPrev.addEventListener('click', () => { goTo(current - 1); restartAutoplay(); });
+    quotesNext.addEventListener('click', () => { goTo(current + 1); restartAutoplay(); });
     if (!reduceMotion) autoplay();
     track.closest('.quotes-carousel').addEventListener('mouseenter', () => clearInterval(timer));
     track.closest('.quotes-carousel').addEventListener('mouseleave', () => { if (!reduceMotion) autoplay(); });

@@ -431,27 +431,31 @@
       <p class="eyebrow reveal center">Famílias atendidas</p>
       <h2 class="reveal center">O que dizem sobre o acompanhamento</h2>
       <div class="quotes-carousel reveal">
-        <div class="quotes-track" id="quotesTrack">
-          <blockquote class="quote">
-            <svg class="quote-mark" viewBox="0 0 32 24" width="34"><path fill="currentColor" d="M0 24V14.4Q0 7.6 3.6 3.8 7.2 0 13.2 0v4.8Q9.6 4.8 7.8 7Q6 9.2 6 12.8H12.8V24ZM18.8 24V14.4Q18.8 7.6 22.4 3.8 26 0 32 0v4.8Q28.4 4.8 26.6 7Q24.8 9.2 24.8 12.8H31.6V24Z"/></svg>
-            <p>Meu filho voltou a gostar de ir pra escola. A Daniely
-            entendeu o que estava acontecendo muito antes da gente.</p>
-            <cite>Mãe de aluno do 4º ano — depoimento de exemplo</cite>
-          </blockquote>
-          <blockquote class="quote">
-            <svg class="quote-mark" viewBox="0 0 32 24" width="34"><path fill="currentColor" d="M0 24V14.4Q0 7.6 3.6 3.8 7.2 0 13.2 0v4.8Q9.6 4.8 7.8 7Q6 9.2 6 12.8H12.8V24ZM18.8 24V14.4Q18.8 7.6 22.4 3.8 26 0 32 0v4.8Q28.4 4.8 26.6 7Q24.8 9.2 24.8 12.8H31.6V24Z"/></svg>
-            <p>O acompanhamento trouxe clareza pra toda a família, não só
-            pra criança. Sentimos que finalmente tínhamos um plano.</p>
-            <cite>Pai de aluna do 6º ano — depoimento de exemplo</cite>
-          </blockquote>
-          <blockquote class="quote">
-            <svg class="quote-mark" viewBox="0 0 32 24" width="34"><path fill="currentColor" d="M0 24V14.4Q0 7.6 3.6 3.8 7.2 0 13.2 0v4.8Q9.6 4.8 7.8 7Q6 9.2 6 12.8H12.8V24ZM18.8 24V14.4Q18.8 7.6 22.4 3.8 26 0 32 0v4.8Q28.4 4.8 26.6 7Q24.8 9.2 24.8 12.8H31.6V24Z"/></svg>
-            <p>A escola percebeu diferença em poucas semanas. O relatório
-            que ela mandou foi mais claro que tudo que já vi de outros
-            profissionais.</p>
-            <cite>Mãe de aluno do 2º ano — depoimento de exemplo</cite>
-          </blockquote>
+        <div class="quotes-viewport">
+          <div class="quotes-track" id="quotesTrack">
+            <blockquote class="quote">
+              <svg class="quote-mark" viewBox="0 0 32 24" width="34"><path fill="currentColor" d="M0 24V14.4Q0 7.6 3.6 3.8 7.2 0 13.2 0v4.8Q9.6 4.8 7.8 7Q6 9.2 6 12.8H12.8V24ZM18.8 24V14.4Q18.8 7.6 22.4 3.8 26 0 32 0v4.8Q28.4 4.8 26.6 7Q24.8 9.2 24.8 12.8H31.6V24Z"/></svg>
+              <p>Meu filho voltou a gostar de ir pra escola. A Daniely
+              entendeu o que estava acontecendo muito antes da gente.</p>
+              <cite>Mãe de aluno do 4º ano — depoimento de exemplo</cite>
+            </blockquote>
+            <blockquote class="quote">
+              <svg class="quote-mark" viewBox="0 0 32 24" width="34"><path fill="currentColor" d="M0 24V14.4Q0 7.6 3.6 3.8 7.2 0 13.2 0v4.8Q9.6 4.8 7.8 7Q6 9.2 6 12.8H12.8V24ZM18.8 24V14.4Q18.8 7.6 22.4 3.8 26 0 32 0v4.8Q28.4 4.8 26.6 7Q24.8 9.2 24.8 12.8H31.6V24Z"/></svg>
+              <p>O acompanhamento trouxe clareza pra toda a família, não só
+              pra criança. Sentimos que finalmente tínhamos um plano.</p>
+              <cite>Pai de aluna do 6º ano — depoimento de exemplo</cite>
+            </blockquote>
+            <blockquote class="quote">
+              <svg class="quote-mark" viewBox="0 0 32 24" width="34"><path fill="currentColor" d="M0 24V14.4Q0 7.6 3.6 3.8 7.2 0 13.2 0v4.8Q9.6 4.8 7.8 7Q6 9.2 6 12.8H12.8V24ZM18.8 24V14.4Q18.8 7.6 22.4 3.8 26 0 32 0v4.8Q28.4 4.8 26.6 7Q24.8 9.2 24.8 12.8H31.6V24Z"/></svg>
+              <p>A escola percebeu diferença em poucas semanas. O relatório
+              que ela mandou foi mais claro que tudo que já vi de outros
+              profissionais.</p>
+              <cite>Mãe de aluno do 2º ano — depoimento de exemplo</cite>
+            </blockquote>
+          </div>
         </div>
+        <button class="quotes-arrow quotes-prev" id="quotesPrev" aria-label="Depoimento anterior">‹</button>
+        <button class="quotes-arrow quotes-next" id="quotesNext" aria-label="Próximo depoimento">›</button>
         <div class="quotes-dots" id="quotesDots"></div>
       </div>
     </div>
@@ -570,7 +574,12 @@
     </div>
   </div>
   <div class="footer-credit">
-    © 2026 Nexus Psicopedagogia. Todos os direitos reservados. · <a href="termos-de-uso.html">Termos de Uso</a> · desenvolvido por <a href="https://zinkra.com.br" target="_blank" rel="noopener">Zinkra Tecnologia</a>
+    <p class="footer-copyright">© 2026 Nexus Psicopedagogia. Todos os direitos reservados.</p>
+    <div class="footer-links">
+      <a href="termos-de-uso.html">Termos de Uso</a>
+      <span class="footer-dot" aria-hidden="true">·</span>
+      <span>desenvolvido por <a href="https://zinkra.com.br" target="_blank" rel="noopener">Zinkra Tecnologia</a></span>
+    </div>
   </div>
 </footer>
 
