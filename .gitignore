@@ -1,0 +1,8 @@
+# Arquivos originais enviados pelo cliente — já otimizados/renomeados em assets/,
+# mantidos fora do repositório só como backup local (ver LEIA-ME.txt)
+assets/nexus.png
+assets/foto galeria*.png
+
+# Sistema
+.DS_Store
+Thumbs.db

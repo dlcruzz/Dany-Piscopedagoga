@@ -1,0 +1,159 @@
+LANDING PAGE — NEXUS PSICOPEDAGOGIA
+======================================
+
+O que já está pronto:
+- Site completo (index.html + style.css + script.js + assets/three.min.js),
+  responsivo, com:
+  - PRELOADER de entrada com a logo real da Nexus surgindo com um
+    fade + leve zoom antes do site aparecer.
+  - CURSOR CUSTOMIZADO (ponto + anel que reage ao passar sobre links/
+    botões/cards) — ativo só em desktop.
+  - MODO ESCURO — botão no menu alterna todo o site (inclusive as
+    cores do elemento 3D) para uma versão dark da paleta.
+  - Elemento 3D animado no hero (icosaedro girando com facetas satélite,
+    Three.js, auto-hospedado) que reage ao mouse e muda de cor com o
+    modo escuro.
+  - BARRA DE PROGRESSO DE SCROLL no topo da página.
+  - BOTÃO VOLTAR AO TOPO com anel de progresso circular.
+  - BOTÕES MAGNÉTICOS — os CTAs principais "puxam" levemente o cursor.
+  - CARROSSEL DE DEPOIMENTOS com autoplay, pausa ao passar o mouse e
+    navegação por bolinhas.
+  - LINHA DE TIMELINE animada na seção "Como funciona", que se
+    preenche conforme a rolagem passa por cada etapa.
+  - Faixa animada (marquee) em looping infinito, com texto repetido o
+    suficiente pra nunca deixar espaço vazio durante o loop.
+  - Cards com efeito de inclinação 3D (tilt) ao passar o mouse.
+  - Glow ambiente seguindo o cursor.
+  - Parallax nos elementos de fundo ao rolar a página.
+  - GALERIA DE FOTOS — carrossel grande em destaque, com as 7 fotos
+    reais que você enviou (assets/gallery-1.jpg a gallery-7.jpg,
+    otimizadas — reduzi de ~1,5MB pra ~235KB no total sem perder
+    qualidade perceptível). A altura se ajusta pela altura da tela
+    (não só a largura), então cabe inteiro em notebooks sem cortar.
+    Passa sozinho a cada 5,5s com zoom lento tipo "Ken Burns" na foto
+    ativa + um efeito de "lapisinho riscando" na transição — 3
+    animações diferentes que vão alternando a cada troca (risco
+    horizontal, risco diagonal e um risco circular saindo do centro),
+    cada uma com um rabisco de lápis desenhado por cima no momento do
+    corte. Setas e bolinhas pra navegar manualmente, barra de progresso
+    mostrando quanto falta pra trocar, e pausa quando o mouse passa por
+    cima.
+  - LOGO NO HERO — a logo completa da Nexus (ícone + "Nexus
+    Psicopedagogia") aparece no topo do Hero, acima do texto principal.
+  - SEÇÃO INSTAGRAM — grid de preview + botão que leva direto pro
+    perfil real (@daniely.psicopedagoga). Pronta para receber um widget
+    de feed ao vivo (ver pendência abaixo).
+  - DESENHINHOS DE FUNDO ("efeito lápis") — 19 desenhos espalhados por
+    TODAS as seções do site (Hero, Sobre, Atuação, Galeria, Como
+    funciona, Depoimentos, Instagram, Dúvidas, CTA final e até o
+    rodapé): coraçãozinho, lápis, estrela, seta, nuvem, lâmpada,
+    arco-íris, sol, florzinha e livrinho. Cada um se desenha sozinho ao
+    entrar na tela e fica num LOOP CONTÍNUO — desenha, some, desenha de
+    novo — pra sempre, cada um com um ritmo levemente diferente pra não
+    parecer robótico. Respeitam "reduzir movimento" (ficam parados, sem
+    piscar) e somem em telas menores que 1100px, pra não atrapalhar o
+    celular.
+- Paleta usando as cores da identidade (slate teal, sage, eucalipto),
+  com variante escura equivalente.
+- Estrutura: Hero, Sobre, Atuação (4 áreas), Galeria (carrossel de
+  fotos), Como funciona (processo em 4 etapas), Depoimentos (carrossel),
+  Instagram, Dúvidas frequentes, CTA final e rodapé.
+- Página separada TERMOS-DE-USO.HTML, linkada no rodapé, com o texto de
+  termos de uso e o aviso de "todos os direitos reservados".
+- Botão flutuante de WhatsApp.
+- Rodapé: copyright + "Todos os direitos reservados" + link para os
+  Termos de Uso + "desenvolvido por Zinkra Tecnologia" (zinkra.com.br).
+- three.js está AUTO-HOSPEDADO em assets/three.min.js — não depende de
+  nenhum CDN externo, então funciona mesmo se algum CDN cair.
+- SEO AVANÇADO configurado em index.html e termos-de-uso.html:
+  - Title e meta description únicos e otimizados por página.
+  - Open Graph completo (Facebook/Instagram/WhatsApp) e Twitter Card —
+    o link do site aparece com título, descrição e a imagem de capa
+    (assets/og-image.jpg) ao ser compartilhado.
+  - Link canonical em cada página (evita conteúdo duplicado aos olhos
+    do Google).
+  - Dados estruturados (JSON-LD) tipo "ProfessionalService" (nome,
+    endereço, Instagram, Daniely como founder) e "FAQPage" (as 4
+    perguntas da seção Dúvidas passam a poder aparecer como sanfona
+    direto no resultado do Google).
+  - Favicon e ícones gerados a partir da logo real (ver abaixo) +
+    manifest.json (permite "adicionar à tela inicial" no celular).
+  - robots.txt e sitemap.xml na raiz do site, para os buscadores
+    indexarem corretamente.
+  - Skip-link de acessibilidade ("Pular para o conteúdo") e correção
+    de hierarquia de títulos (cada página passa a ter só um <h1>).
+- LOGO REAL DA NEXUS integrada em todo o site, a partir do arquivo
+  assets/nexus.png que vocë enviou. Eu recortei/gerei automaticamente:
+  - assets/nexus-icon.png — só o símbolo (cérebro + livro + caminho +
+    crianças + estrela), usado no menu e no preloader.
+  - assets/nexus-logo.png — a logo completa (símbolo + "NEXUS
+    PSICOPEDAGOGIA"), usada como base da imagem de compartilhamento.
+  - assets/favicon-16.png, favicon-32.png, favicon-180.png,
+    favicon-192.png, favicon-512.png — o símbolo dentro de um círculo
+    verde eucalipto, em vários tamanhos (aba do navegador, "adicionar
+    à tela inicial" no iPhone/Android).
+  - assets/og-image.jpg (1200x630) — a logo completa sobre um fundo
+    suave com as cores da marca, é o que aparece quando o link do site
+    é compartilhado no WhatsApp/Instagram.
+  O arquivo assets/nexus.png original eu mantive intacto, caso precise
+  gerar outros tamanhos no futuro.
+
+REBRANDING PARA NEXUS PSICOPEDAGOGIA:
+A marca do site passou de "Daniely Psicopedagoga" para "Nexus
+Psicopedagogia" (Daniely segue sendo citada como a psicopedagoga à
+frente da Nexus — bio na seção "Sobre", depoimento e a foto placeholder
+continuam com o nome dela, isso não mudou). Atualizei nome da marca em:
+título das páginas, meta tags, JSON-LD, menu, rodapé e no texto de
+Termos de Uso. O e-mail placeholder também mudou de
+contato@danielypsico.com.br para contato@nexuspsicopedagogia.com.br —
+é só um placeholder ainda, ajustar pro e-mail real assim que definido
+(ver pendência 3 abaixo).
+
+Observação de performance: o site é visualmente rico de propósito
+(pedido explícito do cliente). Em celulares mais antigos, o cursor
+customizado e o 3D já vêm desativados automaticamente — mas vale testar
+a velocidade de carregamento real depois de publicado e, se precisar,
+eu reduzo alguma camada de animação sem perder o efeito geral.
+
+O que falta trocar antes de publicar (marcado no código):
+1. NÚMERO DO WHATSAPP — está como https://wa.me/5500000000000 em
+   vários lugares (nav, hero, CTA final, botão flutuante, rodapé).
+   Buscar e substituir "5500000000000" pelo número real.
+2. E-MAIL — contato@nexuspsicopedagogia.com.br é um placeholder até
+   confirmar o domínio real registrado.
+3. FOTO — a seção "Sobre" tem um quadro placeholder ("foto de
+   Daniely"). Substituir por foto real dela.
+4. DEPOIMENTOS — os dois depoimentos ainda são exemplos fictícios (o
+   aviso "* depoimentos de exemplo" foi removido da tela a pedido, mas
+   o texto em si continua inventado). Trocar por relatos reais de
+   famílias atendidas (com autorização), ou remover a seção se ainda
+   não houver nenhum.
+5. GALERIA — as fotos já são reais (as 7 que você enviou), mas confirme
+   se há autorização de uso de imagem para as crianças e adolescentes
+   que aparecem nelas, já que o site é público.
+6. FEED DO INSTAGRAM — a seção Instagram já leva pro perfil real
+   (@daniely.psicopedagoga), mas o grid ainda é só um preview estático.
+   Pra virar feed ao vivo: criar conta grátis num serviço tipo
+   SnapWidget ou LightWidget, conectar a conta do Instagram por lá e
+   colar o código de incorporação gerado dentro de #igFeed no
+   index.html (o bloco já está marcado com um comentário indicando
+   onde).
+7. DOMÍNIO REAL NO SEO — as tags de SEO (canonical, Open Graph,
+   sitemap.xml, robots.txt e o JSON-LD) estão usando
+   "https://www.nexuspsicopedagogia.com.br/" como domínio provisório,
+   o mesmo do e-mail placeholder (item 2). Quando o domínio real for
+   registrado, buscar e substituir "nexuspsicopedagogia.com.br" em:
+   index.html, termos-de-uso.html, robots.txt e sitemap.xml.
+
+Como visualizar:
+Basta abrir o arquivo index.html em qualquer navegador — não precisa
+de servidor. Pra publicar, é só subir a pasta inteira (index.html,
+termos-de-uso.html, style.css, script.js, manifest.json, robots.txt,
+sitemap.xml e a pasta assets/) num serviço de hospedagem (Hostinger,
+Vercel, etc.) junto com o domínio.
+
+Observação: dentro de assets/ ficaram os arquivos originais que você
+enviou (nexus.png e as 7 "foto galeria (N).png") — o site usa as
+versões otimizadas (nexus-icon.png, nexus-logo.png, gallery-1.jpg a
+gallery-7.jpg etc.), então os originais não precisam ir pro servidor
+de hospedagem. Guardei eles só como backup/referência.
