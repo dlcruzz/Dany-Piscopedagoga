@@ -648,18 +648,6 @@ html.dark .doodle{ color:var(--sage); }
   .doodle.seen path{ animation:none; stroke-dashoffset:0; opacity:.7; }
 }
 
-/* ---------- instagram ---------- */
-.ig-grid{
-  display:grid; grid-template-columns:repeat(3, 1fr); gap:12px;
-  max-width:600px; margin:0 auto 34px;
-}
-.ig-cell{
-  aspect-ratio:1/1; border-radius:14px; border:1px solid var(--line);
-  background:linear-gradient(160deg, var(--sand) 0%, var(--sage) 100%);
-  display:flex; align-items:center; justify-content:center; color:rgba(36,50,45,.4);
-}
-.ig-note{ text-align:center; font-size:.78rem; color:var(--ink-soft); margin-top:18px; opacity:.75; }
-@media (max-width:520px){ .ig-grid{ grid-template-columns:repeat(3, 1fr); max-width:340px; gap:8px; } }
 
 /* ---------- process timeline progress line ---------- */
 .process{ position:relative; }

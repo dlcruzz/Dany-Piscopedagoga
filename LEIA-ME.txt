@@ -40,9 +40,10 @@ O que já está pronto:
     cima.
   - LOGO NO HERO — a logo completa da Nexus (ícone + "Nexus
     Psicopedagogia") aparece no topo do Hero, acima do texto principal.
-  - SEÇÃO INSTAGRAM — grid de preview + botão que leva direto pro
-    perfil real (@daniely.psicopedagoga). Pronta para receber um widget
-    de feed ao vivo (ver pendência abaixo).
+  - SEÇÃO INSTAGRAM — simples: texto convidativo + botão que leva
+    direto pro perfil real (@daniely.psicopedagoga). Sem widget de
+    feed ao vivo (decidido não usar, pois exigiria conectar a conta a
+    um serviço externo).
   - DESENHINHOS DE FUNDO ("efeito lápis") — 19 desenhos espalhados por
     TODAS as seções do site (Hero, Sobre, Atuação, Galeria, Como
     funciona, Depoimentos, Instagram, Dúvidas, CTA final e até o
@@ -131,14 +132,7 @@ O que falta trocar antes de publicar (marcado no código):
 5. GALERIA — as fotos já são reais (as 7 que você enviou), mas confirme
    se há autorização de uso de imagem para as crianças e adolescentes
    que aparecem nelas, já que o site é público.
-6. FEED DO INSTAGRAM — a seção Instagram já leva pro perfil real
-   (@daniely.psicopedagoga), mas o grid ainda é só um preview estático.
-   Pra virar feed ao vivo: criar conta grátis num serviço tipo
-   SnapWidget ou LightWidget, conectar a conta do Instagram por lá e
-   colar o código de incorporação gerado dentro de #igFeed no
-   index.html (o bloco já está marcado com um comentário indicando
-   onde).
-7. DOMÍNIO REAL NO SEO — as tags de SEO (canonical, Open Graph,
+6. DOMÍNIO REAL NO SEO — as tags de SEO (canonical, Open Graph,
    sitemap.xml, robots.txt e o JSON-LD) estão usando
    "https://www.nexuspsicopedagogia.com.br/" como domínio provisório,
    o mesmo do e-mail placeholder (item 2). Quando o domínio real for
