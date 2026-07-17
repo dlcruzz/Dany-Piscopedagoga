@@ -1,4 +1,4 @@
-// Nexus Psicopedagogia — interactions
+// Nexus — Clínica Multidisciplinar — interactions
 document.addEventListener('DOMContentLoaded', () => {
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
