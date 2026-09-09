@@ -229,6 +229,12 @@ h1, h2{ font-size:clamp(1.7rem, 2.6vw, 2.5rem); max-width:640px; }
   display:flex; align-items:center; justify-content:center;
   color:rgba(36,50,45,.55); font-family:var(--display); font-size:1.1rem; text-align:center;
 }
+.portrait-photo{
+  aspect-ratio:4/5; border-radius:var(--radius); overflow:hidden;
+}
+.portrait-photo img{
+  width:100%; height:100%; object-fit:cover; display:block;
+}
 .frame-underline{ position:absolute; bottom:-16px; right:8%; width:70%; height:18px; color:var(--teal); }
 .frame-underline path{ fill:none; stroke:currentColor; stroke-width:4; stroke-linecap:round; }
 
