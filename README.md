@@ -1,6 +1,6 @@
-# Nexus Psicopedagogia — Site Institucional
+# Daniely Psicopedagoga — Site Institucional
 
-Landing page institucional desenvolvida para a **Nexus Psicopedagogia**, clínica de psicopedagogia clínica e institucional em São Paulo/SP. Site estático, responsivo e visualmente rico, com foco em apresentar o trabalho da profissional e converter visitantes em agendamentos via WhatsApp e Instagram.
+Landing page institucional desenvolvida para a **Daniely Psicopedagoga**, clínica de psicopedagogia clínica e institucional em São Paulo/SP. Site estático, responsivo e visualmente rico, com foco em apresentar o trabalho da profissional e converter visitantes em agendamentos via WhatsApp e Instagram.
 
 > Projeto desenvolvido como trabalho **freelancer** de desenvolvimento web (crédito de rodapé: Zinkra Tecnologia).
 
@@ -47,8 +47,6 @@ daniely-site/
 ├── LEIA-ME.txt           # checklist de pendências para o cliente (pt-BR)
 └── assets/
     ├── three.min.js       # Three.js auto-hospedado
-    ├── nexus-icon.png     # ícone da marca (nav, preloader, favicons)
-    ├── nexus-logo.png     # logo completa (ícone + wordmark)
     ├── favicon-*.png      # favicons em vários tamanhos
     ├── og-image.jpg       # imagem de compartilhamento (redes sociais)
     └── gallery-*.jpg      # fotos da galeria

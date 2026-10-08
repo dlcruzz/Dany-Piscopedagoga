@@ -1,4 +1,4 @@
-// Nexus — Clínica de Psicopedagogia — interactions
+// Daniely Psicopedagoga — interactions
 document.addEventListener('DOMContentLoaded', () => {
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
